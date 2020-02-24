@@ -12,7 +12,7 @@ module Migakiba
     config.load_defaults 5.2
     config.generators do |g|
       g.stylesheets    false
-      g.javascript     false
+      g.javascripts    false
       g.helper         false
       g.test_framework false
     end
