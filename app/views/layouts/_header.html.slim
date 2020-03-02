@@ -9,12 +9,20 @@ header.wrapper
       li
         a[href="#"]
           | 地図から探す
-      li
-        a[href="#"]
-          | お気に入り
-      li
-        a[href="#"]
-          | ユーザー名
-      li
-        a[href="#"]
-          | 投稿する
+      - if user_signed_in?
+        li
+          a[href="#"]
+            | お気に入り
+        li
+          a[href="#"]
+            | ユーザー名
+        li
+          a[href="#"]
+            | 投稿する
+      - else
+        li 
+          a[href=new_user_registration_path]
+            | 新規登録
+        li 
+          a[href=new_user_session_path]
+            | ログイン
