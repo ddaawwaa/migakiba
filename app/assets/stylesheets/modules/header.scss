@@ -12,14 +12,28 @@
     font-size: 150%;
   }
 
-  .menu-list {
+  .menu {
     height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    li {
-      margin-left: 0.5rem;
+    &__item {
+      margin-left: 2rem;
     }
+    &__user-list{
+      position: relative;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  .user-card {
+    width: 100px;
+    position: absolute;
+    z-index: 30;
+    border: 1px solid black;
+    visibility: hidden;
   }
 }
