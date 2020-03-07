@@ -14,9 +14,9 @@ header.wrapper
         li.menu__item
           a[href="#"]
             | お気に入り
-        li.menu__item.menu__user-list
-          | ユーザー名
-          .user-card
+        li.menu__item.menu__user-list#user-name
+          = current_user.nickname
+          .user-card#user-menu
             ul
               li マイページ
               li

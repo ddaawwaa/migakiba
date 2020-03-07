@@ -23,11 +23,17 @@
     }
     &__user-list{
       position: relative;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
   .user-card {
+    width: 100px;
     position: absolute;
     z-index: 30;
     border: 1px solid black;
+    visibility: hidden;
   }
 }
