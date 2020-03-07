@@ -2,27 +2,34 @@ header.wrapper
   .header-container
     h1.title
       | ミガキバ
-    ul.menu-list
-      li
+    ul.menu
+      li.menu__item
         a[href="#"]
           | すべての投稿
-      li
+      li.menu__item
+        
         a[href="#"]
           | 地図から探す
       - if user_signed_in?
-        li
+        li.menu__item
           a[href="#"]
             | お気に入り
-        li
-          a[href="#"]
-            | ユーザー名
-        li
+        li.menu__item.menu__user-list
+          | ユーザー名
+          .user-card
+            ul
+              li マイページ
+              li
+                = link_to '情報編集', edit_user_registration_path
+              li 
+                = link_to 'ログアウト', destroy_user_session_path, method: :delete
+        li.menu__item
           a[href="#"]
             | 投稿する
       - else
-        li 
+        li.menu__item
           a[href=new_user_registration_path]
             | 新規登録
-        li 
+        li.menu__item
           a[href=new_user_session_path]
             | ログイン
