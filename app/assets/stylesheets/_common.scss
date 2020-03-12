@@ -16,6 +16,7 @@ a {
   color: #000;
 }
 
+// レイアウト
 .wrapper {
   max-width: 1400px;
   margin: 0 auto;
@@ -28,3 +29,9 @@ a {
   align-items: center;
   margin-bottom: 60px;
 }
+
+// 色
+$main-green: #028935;
+$sub-green: #A6E0AC;
+$alert-red: #DB0224;
+$section-gray: #D7D7D8;
