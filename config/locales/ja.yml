@@ -3,13 +3,13 @@ ja:
   enums:
     spot:
       faucet_num:
-        none: "なし"
+        no_faucet: "なし"
         one: "1つ"
         two: "2つ"
-        thiree: "3つ"
+        three: "3つ"
         four_or_more: "4つ以上"
       towel:
-        none: "なし"
+        no_towel: "なし"
         air_towel: "エアータオル"
         paper_towel: "ペーパータオル"
       avairable_user:
