@@ -2,5 +2,8 @@
 @import "common";
 @import "modules/header";
 
-// users table
-@import "modules/users/sign_up"
+// users object
+@import "modules/users/sign_up";
+
+// spots object
+@import "modules/spots/form";

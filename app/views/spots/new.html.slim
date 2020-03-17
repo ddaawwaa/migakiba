@@ -1,0 +1,94 @@
+.wrapper
+  .container
+    h1.form-title. 投稿する
+    .form-field.container__inner
+      = form_with model: @spot, locale: true do |f|
+        .form-section
+          / name
+          .form-section__label
+            = f.label :name, "スポット名"
+          .form-section__form 
+            = f.text_field :name, { class: "input-text"}
+
+          / photo field_for
+        .form-section
+          .form-section__label
+            写真
+          .form-section__form 
+            投稿フォーム
+
+        .form-section
+          / address
+          .form-section__label
+            = f.label :address, "住所"
+          .form-section__form 
+            = f.text_field :address, { class: "input-text"}
+
+        .form-section
+          / open_time
+          .form-section__label
+            = f.label :open_time, "開始時間"
+          .form-section__form 
+            = f.time_select :open_time
+
+        .form-section
+          / close_time
+          .form-section__label
+            = f.label :close_time, "終了時間"
+          .form-section__form
+            = f.time_select :open_time
+
+        .form-section
+          / homepage
+          .form-section__label
+            = f.label :homepage, "ホームページ"
+          .form-section__form 
+            = f.text_field :homepage, { class: "input-text"}
+
+        .form-section
+          / faucet_num
+          .form-section__label
+            = f.label :faucet_num, "蛇口の数"
+          .form-section__form 
+            = f.radio_button :faucet_num, :no_faucet
+            = f.label :no_faucet, Spot.faucet_nums_i18n[:no_faucet]
+            = f.radio_button :faucet_num, :one
+            = f.label :one, Spot.faucet_nums_i18n[:one]
+            = f.radio_button :faucet_num, :two
+            = f.label :two, Spot.faucet_nums_i18n[:two]
+            = f.radio_button :faucet_num, :three
+            = f.label :three, Spot.faucet_nums_i18n[:three]
+            = f.radio_button :faucet_num, :four_or_more
+            = f.label :four_or_more, Spot.faucet_nums_i18n[:four_or_more]
+
+        .form-section
+          / towel
+          .form-section__label
+            = f.label :towel, "乾燥設備"
+          .form-section__form 
+            = f.radio_button :towel, :no_towel
+            = f.label :no_towel, Spot.towels_i18n[:no_towel]
+            = f.radio_button :towel, :air_towel
+            = f.label :air_towel, Spot.towels_i18n[:air_towel]
+            = f.radio_button :towel, :paper_towel
+            = f.label :paper_towel, Spot.towels_i18n[:paper_towel]
+
+        .form-section          
+          / avairable_user
+          .form-section__label
+            = f.label :avairable_user, "使える人"
+          .form-section__form 
+            = f.radio_button :avairable_user, :anyone
+            = f.label :anyone, Spot.avairable_users_i18n[:anyone] 
+            = f.radio_button :avairable_user, :only_concerned
+            = f.label :only_concerned, Spot.avairable_users_i18n[:only_concerned]
+
+        .form-section
+          / description
+          .form-section__label
+            = f.label :description, "説明・レビューなど"
+          .form-section__form 
+            = f.text_area :description, { class: "input-text"}
+        
+        .form-section
+          = f.submit '投稿する', {class:"input-submit"}

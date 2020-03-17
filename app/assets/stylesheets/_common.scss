@@ -28,6 +28,11 @@ a {
   padding: 0 1rem;
   align-items: center;
   margin-bottom: 60px;
+  
+  &__inner {
+    margin: 0 auto;
+    padding: 5%;
+  }
 }
 
 // 色
