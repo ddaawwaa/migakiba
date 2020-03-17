@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_14_135230) do
+ActiveRecord::Schema.define(version: 2020_03_10_090529) do
 
   create_table "spots", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id", null: false
@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2020_03_14_135230) do
     t.time "open_time"
     t.time "close_time"
     t.string "homepage"
-    t.integer "faucet_num", null: false
+    t.integer "fauset_num", null: false
     t.integer "towel", null: false
     t.integer "avairable_user", null: false
     t.text "description", null: false
