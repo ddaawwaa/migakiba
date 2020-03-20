@@ -10,12 +10,12 @@
           .form-section__form 
             = f.text_field :name, { class: "input-text"}
 
-          / photo field_for
-        .form-section
-          .form-section__label
-            写真
-          .form-section__form 
-            投稿フォーム
+        = f.fields_for :photos do |f_photo|
+          .form-section
+            .form-section__label
+              = f_photo.label :photos, "写真"
+            .form-section__form 
+              = f_photo.file_field :photos
 
         .form-section
           / address
