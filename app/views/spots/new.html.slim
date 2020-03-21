@@ -13,9 +13,9 @@
         = f.fields_for :photos do |f_photo|
           .form-section
             .form-section__label
-              = f_photo.label :photos, "写真"
+              = f_photo.label :photo, "写真"
             .form-section__form 
-              = f_photo.file_field :photos
+              = f_photo.file_field :photo
 
         .form-section
           / address
