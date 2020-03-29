@@ -17,12 +17,17 @@
             .form-section__form 
               = f_photo.file_field :photo
 
-        .form-section
+        .form-section.map
           / address
           .form-section__label
-            = f.label :address, "住所"
-          .form-section__form 
-            = f.text_field :address, { class: "input-text"}
+            = label :address, "住所"
+          .form-section__form
+            .form-section__form--search_box
+              = f.text_field :address, { class: "input-text", id: "address", placeholder: "場所を検索 or 地図上から選択"}
+              input onclick="codeAddress()" type="button" value="検索"
+            #map style="width: 100%; height: 40vh;"
+            = f.text_field :latitude, id: "lat", type: "hidden"
+            = f.text_field :longitude, id: "lng", type: "hidden"
 
         .form-section
           / open_time
