@@ -22,7 +22,6 @@ class SpotsController < ApplicationController
   def spots_params
     params.require(:spot).permit(
       :name,
-      :address,
       :open_time,
       :close_time,
       :homepage,
@@ -30,6 +29,8 @@ class SpotsController < ApplicationController
       :towel,
       :avairable_user,
       :description,
+      :latitude,
+      :longitude,
       photos_attributes: [:photo, :id, :_destroy]
     ).merge(user_id: current_user.id)
   end
